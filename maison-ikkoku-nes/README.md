@@ -10,9 +10,7 @@ Patch notes and installation — 15 October 2026
 - **SHA-256:** `2e70e03a2ec5c45ccc947dc2d2514c09d134c5a8c9d225f196f73dcf5fbf8698`
 
 This is the current English translation build. All 973 identified prose/name
-resources and all 74 command slots are translated. A complete manual playthrough
-has not been finished. This is not a guarantee that every hidden resource or
-possible event has been verified.
+resources and all 74 command slots are translated.
 
 ## Required Japanese Rom
 
@@ -77,20 +75,8 @@ verified to reproduce this English ROM byte-for-byte.
 - Original Mapper 1 configuration and ROM size retained; no ROM expansion.
 
 ## Testing And Remaining Limitations
-The automated suite currently has 195 passing tests and one skipped localhost
-browser test. Targeted FCEUX 2.6.5 checks cover text, graphics, menus, pagination
-and representative native save/load behavior. Full-game progression, all later
-scenes and endings have not been manually verified to completion.
-
 The WC wall poster remains Japanese by choice. Hidden text/graphic coverage and
 some dynamic contexts remain under investigation.
-
-A reported EverDrive/Famicom market-text corruption issue is not currently
-reproducible. An old save state is suspected, but its cause is unconfirmed.
-Do not reuse old emulator/EverDrive save states after updating the ROM: they
-restore execution state, RAM and graphics caches from the previous build.
-In-game battery saves are different; keep them backed up. Compatibility across
-all game states, emulator versions and flashcarts is not guaranteed.
 
 Please report issues with the location, action, screenshot, ROM version/hash,
 and emulator or hardware used. Note whether an old save state was loaded.

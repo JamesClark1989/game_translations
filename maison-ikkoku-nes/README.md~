@@ -1,0 +1,100 @@
+# Maison Ikkoku — English Translation
+Nintendo Famicom / NES | Bothtec, 1988
+Patch notes and installation — 15 October 2026
+
+## Patch File
+
+- **File:** `patch/maison_ikkoku_english.bps`
+- **Format:** BPS
+- **Size:** 37,998 bytes
+- **SHA-256:** `2e70e03a2ec5c45ccc947dc2d2514c09d134c5a8c9d225f196f73dcf5fbf8698`
+
+This is the current English translation build. All 973 identified prose/name
+resources and all 74 command slots are translated.
+
+## Required Japanese Rom
+
+- **Game:** Maison Ikkoku (Japan), Nintendo Famicom version
+- **Expected filename:** `Maison Ikkoku (Japan).nes`
+- **Size:** 262,160 bytes (256 KiB PRG plus 16-byte NES header)
+- **Header:** NES 2.0
+- **Mapper:** 1 / MMC1, submapper 0
+- **CHR:** 8 KiB CHR RAM; no CHR ROM
+- **Save memory:** 8 KiB battery-backed RAM
+- **Trainer:** None
+- **CRC32:** `096B9505`
+- **SHA-1:** `bed52c6554ddc068373cc9bcedfffb6e90a6ba01`
+- **SHA-256:** `4a6ab2343cd607f8dec0104244861157cf229b0dbdf26d78ac25dbbe6d1d248a`
+
+The filename may differ; the matching file contents are what matter.
+All fingerprints above include the 16-byte header. Do not strip, replace or
+convert the header. Do not use another platform's version, another translation,
+or an already patched ROM. No copyrighted ROM is supplied.
+
+## Installation
+1. Back up your original ROM and any save files.
+2. Verify that your unmodified Japanese ROM matches the size and fingerprints
+   above. On Linux, use:
+
+   ```sh
+   sha256sum "Maison Ikkoku (Japan).nes"
+   sha1sum "Maison Ikkoku (Japan).nes"
+   ```
+
+3. Open a patcher that supports BPS. Select maison_ikkoku_english.bps as the
+   patch and your matching Japanese ROM as the source.
+4. Save the output as a NEW file, for example Maison Ikkoku (English).nes.
+   Keep the original Japanese ROM unchanged.
+5. Load the new English ROM in an NES/MMC1-compatible emulator or flashcart.
+   Start fresh rather than loading a save state made with a different build.
+
+If the patcher reports a source/checksum mismatch, check your original ROM and
+header. Do not disable checksum verification to force the patch to apply.
+
+## Expected English Rom
+
+- **Example filename:** `Maison Ikkoku (English).nes`
+- **Size:** 262,160 bytes
+- **CRC32:** `89C3F2A5`
+- **SHA-1:** `922a592aa2c16237561c3bca275ecd9e6969b8b3`
+- **SHA-256:** `9bc631d5c310ce24d54f0d835e436766dd37e872c57ca5a36e2701afbff48168`
+
+Applying the supplied BPS to a fresh read of the matching original has been
+verified to reproduce this English ROM byte-for-byte.
+
+## Translation And Patch Notes
+- English dialogue, narration, commands, item labels and location/name resources
+  throughout the currently identified text inventory.
+- Decorative English title logo and English gameplay logo.
+- Full TOKEIZAKA / STATION sign lettering.
+- Full English names in dialogue, with looping scrolling for long menu names.
+- English word wrapping, multi-page dialogue and dynamic text formatting.
+- English punctuation and adjusted character-by-character text pacing.
+- Repair for the opening window-jump illustration/font-cache collision.
+- Repair for missed music updates during English text bank switching.
+- Original Mapper 1 configuration and ROM size retained; no ROM expansion.
+
+## Testing And Remaining Limitations
+The automated suite currently has 195 passing tests and one skipped localhost
+browser test. Targeted FCEUX 2.6.5 checks cover text, graphics, menus, pagination
+and representative native save/load behavior. Full-game progression, all later
+scenes and endings have not been manually verified to completion.
+
+The WC wall poster remains Japanese by choice. Hidden text/graphic coverage and
+some dynamic contexts remain under investigation.
+
+A reported EverDrive/Famicom market-text corruption issue is not currently
+reproducible. An old save state is suspected, but its cause is unconfirmed.
+Do not reuse old emulator/EverDrive save states after updating the ROM: they
+restore execution state, RAM and graphics caches from the previous build.
+In-game battery saves are different; keep them backed up. Compatibility across
+all game states, emulator versions and flashcarts is not guaranteed.
+
+Please report issues with the location, action, screenshot, ROM version/hash,
+and emulator or hardware used. Note whether an old save state was loaded.
+
+The screenshots/ directory contains eight unedited FCEUX screenshots from
+ordinary controller gameplay on this English build.
+
+Original game/artwork: Bothtec; Maison Ikkoku created by Rumiko Takahashi.
+This is an unofficial fan translation, not an official release.
